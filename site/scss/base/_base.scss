@@ -1,0 +1,131 @@
+$green: #7CBF39;
+$baby-blue: #6DD4E2;
+$tan: #DDD896;
+$yellow: #F3AE2A;
+$orange: #D95019;
+$roboto: 'Roboto',
+sans-serif;
+body {
+  width: 100%;
+  height: 50em;
+  font-family: $roboto;
+}
+
+header {
+  height: 7em;
+  background-image: url('../img/logo_sm.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: -1em auto 0em auto;
+    padding: .5em .7em;
+    background-color: $tan;
+    li {
+      display: inline-block;
+      margin: 0;
+      a {
+        padding: .5em .9em;
+        margin: 0 -0.1em;
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+}
+
+section.intro {
+  background-color: $baby-blue;
+  margin: 0;
+  border-bottom: 2px solid #fff;
+  h1 {
+    font-size: 1.4em;
+    margin: .5em;
+    margin-top: 0;
+    padding-top: .7em;
+    line-height: 1.5em;
+  }
+  p {
+    text-align: right;
+    padding: 0 2em 2em 0em;
+    margin: 0;
+  }
+}
+
+section.mid-section {
+  background-color: $green;
+  border-bottom: 2px solid #fff;
+  h1 {
+    margin: 0;
+    padding: .9em;
+    font-size: 1.2em;
+    display: inline-block;
+  }
+  span {
+    margin: .7em 3em 0em 0em;
+    padding: 0;
+    height: 40px;
+    float: right;
+    width: 44px;
+    border-radius: 50%;
+  }
+  //url('../img/bird_sprite.png') -88px 5px
+  //url('../img/bird_sprite.png') -44px 5px
+  #bird-flap {
+    background: url('../img/bird_sprite.png') 2px 5px;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    &:hover {
+      background: url('../img/bird_sprite.png') -88px 5px;
+      background-size: 300%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+section.action {
+  height: 20em;
+  background-image: url('../img/pipes_bg.jpg');
+  background-size: cover;
+  text-align: center;
+  h2 {
+    margin: 0;
+    font-size: 1.7em;
+    padding-top: 4em;
+    color: $yellow;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  }
+}
+
+section.social {
+  text-align: center;
+  background-color: $tan;
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2em;
+    li {
+      display: inline-block;
+      margin: 0 .5em;
+      a {
+        color: blue;
+      }
+    }
+  }
+}
+
+footer {
+  background-image: url('../img/game_over.jpg');
+  background-size: 89%;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 13em;
+}

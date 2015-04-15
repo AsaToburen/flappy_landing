@@ -18,19 +18,19 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', function() {
   return gulp.src('site/scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('site/css'));
 });
 
-gulp.task('html', function(){
+gulp.task('html', function() {
   gulp.src('site/index.html')
     .pipe(minifyHTML())
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('scripts', function(){
+gulp.task('scripts', function() {
   return browserify('./site/js/main.js')
     .bundle()
     .pipe(source('app.js'))
@@ -39,26 +39,23 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('styles', function(){
+gulp.task('styles', function() {
   gulp.src('site/css/*.css')
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('images', function(){
+gulp.task('images', function() {
   gulp.src('site/img/*')
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'));
 });
 
 
-gulp.task('watch', function(){
+gulp.task('watch', function() {
   gulp.watch('site/js/*.js', ['jshint']);
-  gulp.watch('site/scss/*.scss', ['sass']);
+  gulp.watch('site/scss/**/*.scss', ['sass']);
 });
 
 gulp.task('default', ['jshint', 'sass', 'watch']);
-gulp.task('build', ['jshint','sass','html', 'scripts', 'styles', 'images']);
-
-
-
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
