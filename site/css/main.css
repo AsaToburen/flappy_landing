@@ -319,12 +319,19 @@ section.social {
         margin: 3em; } }
 
 footer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('../img/game_over.jpg');
   background-size: 89%;
   background-position: 40%;
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 13em; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
   @media screen and (min-width: 1024px) {
     footer {
       background-position: 50% 50%;

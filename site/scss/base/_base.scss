@@ -223,6 +223,7 @@ section.social {
 }
 
 footer {
+  @include outer-container;
   background-image: url('../img/game_over.jpg');
   background-size: 89%;
   background-position: 40%;
