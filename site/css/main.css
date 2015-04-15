@@ -142,6 +142,12 @@ table {
 td, th {
   padding: 0; }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
   width: 100%;
   height: 50em;
@@ -152,25 +158,62 @@ header {
   background-image: url('../img/logo_sm.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 90%; }
+  @media screen and (min-width: 640px) {
+    header {
+      height: 20em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('../img/flappy-bird.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 90%; } }
+  @media screen and (min-width: 1024px) {
+    header {
+      height: 7.5em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('../img/flappy-bird.jpg');
+      background-size: 10%;
+      background-repeat: repeat; } }
 
-nav ul {
-  list-style-type: none;
-  margin: -1em auto 0em auto;
-  padding: .5em .7em;
-  background-color: #DDD896; }
-  nav ul li {
-    display: inline-block;
-    margin: 0; }
-    nav ul li a {
-      padding: .5em .9em;
-      margin: 0 -0.1em;
-      text-decoration: none;
-      color: #000; }
+nav {
+  text-align: center; }
+  nav ul {
+    list-style-type: none;
+    margin: -1em auto 0 auto;
+    padding: .5em .7em;
+    background-color: #DDD896; }
+    nav ul li {
+      display: inline-block;
+      margin: 0; }
+      nav ul li a {
+        padding: .5em .9em;
+        margin: 0 -0.1em;
+        text-decoration: none;
+        color: #000; }
+  @media screen and (min-width: 640px) {
+    nav ul {
+      padding: 1em 1.5em; }
+      nav ul li a {
+        margin: 0 1em;
+        padding: 2em 2em; } }
+  @media screen and (min-width: 1024px) {
+    nav {
+      text-align: right; }
+      nav ul {
+        padding: 1em 2em; }
+        nav ul li a {
+          margin: 0 1em;
+          padding: 2em 0em; }
+          nav ul li a:hover {
+            color: #D95019;
+            text-shadow: 2px 2px 1px #969696; } }
 
 section.intro {
   background-color: #6DD4E2;
   margin: 0;
   border-bottom: 2px solid #fff; }
+  section.intro .logo_large {
+    display: none; }
   section.intro h1 {
     font-size: 1.4em;
     margin: .5em;
@@ -179,8 +222,17 @@ section.intro {
     line-height: 1.5em; }
   section.intro p {
     text-align: right;
-    padding: 0 2em 2em 0em;
+    padding: 0 2em 2em 0;
     margin: 0; }
+  @media screen and (min-width: 640px) {
+    section.intro {
+      background-color: #71C5D0; } }
+  @media screen and (min-width: 1024px) {
+    section.intro {
+      background-color: #71C5D0; }
+      section.intro .logo_large {
+        display: block;
+        margin: 0 auto; } }
 
 section.mid-section {
   background-color: #7CBF39;
@@ -191,7 +243,7 @@ section.mid-section {
     font-size: 1.2em;
     display: inline-block; }
   section.mid-section span {
-    margin: .7em 3em 0em 0em;
+    margin: .7em 3em 0 0;
     padding: 0;
     height: 40px;
     float: right;
@@ -217,6 +269,24 @@ section.action {
     padding-top: 4em;
     color: #F3AE2A;
     text-shadow: 4px 4px 2px #969696; }
+  @media screen and (min-width: 640px) {
+    section.action {
+      background-position: 50% 20%; }
+      section.action h2 {
+        font-size: 3em;
+        padding-top: 2.2em; }
+      section.action p {
+        margin-top: 3.5em;
+        font-size: 1.2em; } }
+  @media screen and (min-width: 1024px) {
+    section.action {
+      background-position: 50% 20%; }
+      section.action h2 {
+        font-size: 3em;
+        padding-top: 2.2em; }
+      section.action p {
+        margin-top: 5.5em;
+        font-size: 1.2em; } }
 
 section.social {
   text-align: center;
@@ -233,6 +303,20 @@ section.social {
       margin: 0 .5em; }
       section.social ul li a {
         color: blue; }
+  @media screen and (min-width: 640px) {
+    section.social {
+      height: 10em; }
+      section.social h2 {
+        padding-top: 2em; }
+      section.social li a {
+        margin: 3em; } }
+  @media screen and (min-width: 1024px) {
+    section.social {
+      height: 10em; }
+      section.social h2 {
+        padding-top: 2em; }
+      section.social li a {
+        margin: 3em; } }
 
 footer {
   background-image: url('../img/game_over.jpg');
@@ -241,3 +325,7 @@ footer {
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 13em; }
+  @media screen and (min-width: 1024px) {
+    footer {
+      background-position: 50% 50%;
+      background-size: 50%; } }
