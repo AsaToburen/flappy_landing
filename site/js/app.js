@@ -8,8 +8,8 @@
   var animateBird = function() {
 
     $('#bird-flap').velocity({
-        translateX: 70,
-        translateY: 130
+        translateX: 60,
+        translateY: 190
       }, 600)
       .velocity({
         translateX: 370,
@@ -24,11 +24,11 @@
         translateY: 270
       }, 900)
       .velocity({
-        translateX: 1000,
+        translateX: 1200,
         translateY: 80
       }, 1000)
       .velocity({
-        translateX: 1400,
+        translateX: 1600,
         translateY: 40
       }, 1200);
 
@@ -36,15 +36,41 @@
   };
 
 
+  //var socialAnimate = function() {
+  //  $('section.social li')
+  //    .velocity("transition.slideLeftIn", {
+  //      stagger: 250
+  //    })
+  //    .delay(750)
+  //    .velocity({
+  //      opacity: 0
+  //    }, 750);
+  //};
+
   var animateLog = 0;
 
-  function birdListener(ev) {
+  function scrollListener(ev) {
     if (window.scrollY > 460 && animateLog === 0) {
       animateLog++;
       animateBird();
+    } else if (window.scrollY > 600) {
+      socialAnimate();
     }
   }
 
-  window.onscroll = birdListener;
+  window.onscroll = scrollListener;
+
+  $(".logo_large").velocity("transition.slideUpIn", {
+    opacity: [1, 0],
+    duration: 2000
+  });
+
+
+
+
+
+
+
+
 
 })();

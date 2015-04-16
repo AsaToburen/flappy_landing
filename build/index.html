@@ -1,15 +1,376 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Flappy Bird Clone Landing Page</title><meta name=description content="A brief description of your site"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="shortcut icon" href=/favicon.ico><link rel=apple-touch-icon href=/apple-touch-icon.png><style>
-    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}footer,header,nav,section{display:block}a{background-color:transparent}h1{font-size:2em;margin:.67em 0}img{border:0}
-  </style></head><script>
-var cb = function() {
-  var l = document.createElement('link');
-  l.rel = 'stylesheet';
-  l.href = 'first.css';
-  var h = document.getElementsByTagName('head')[0];
-  h.parentNode.insertBefore(l, h);
-};
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-  webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(cb);
-else window.addEventListener('load', cb);
-</script><header></header><nav><ul><li><a href=#>Home</a></li><li><a href=#>About</a></li><li><a href=#>Contact</a></li><li><a href=#>Play</a></li></ul></nav><section class=intro><h1>Intro</h1></section><section class=features><div><p></p></div><div><h2>Heading about flappy</h2><img></div></section><section class=banner><div class=action-msg><h2></h2></div></section><section class=social-links><ul><li><a>Twitter</a></li><li><a>Facebook</a></li><li><a>Google</a></li></ul></section><footer><div class=contact><h2>Another message</h2><ul><li>Phone</li><li>Email</li><li>Address</li></ul></div></footer><body></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Flappy Bird Clone Landing Page</title>
+  <meta name="description" content="A brief description of your site">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="img/flappy_ico.ico">
+  <style type="text/css">
+  @media screen and (min-width: 640px) {
+    header {
+      height: 20em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('img/flappy-bird.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 90%
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    header {
+      height: 7.5em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('img/flappy-bird.jpg');
+      background-size: 10%;
+      background-repeat: repeat
+    }
+  }
+  
+  @media screen and (min-width: 640px) {
+    nav ul {
+      padding: 1em 1.5em
+    }
+    nav ul li a {
+      margin: 0 1em;
+      padding: 2em
+    }
+    section.intro {
+      background-color: #71C5D0
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    nav {
+      text-align: right
+    }
+    nav ul {
+      padding: 1em 2em
+    }
+    nav ul li a {
+      margin: 0 1em;
+      padding: 2em 0
+    }
+    section.intro {
+      background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, teal));
+      background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -o-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: radial-gradient(ellipse at center, #71C5D0 0, #71C5D0 35%, teal 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#71C5D0', endColorstr='#008080', GradientType=1)
+    }
+    section.intro #logo_large {
+      width: 700px;
+      height: 220px;
+      display: inline-block
+    }
+  }
+  
+  @media screen and (min-width: 640px) {
+    section.action {
+      background-position: 50% 20%
+    }
+    section.action h2 {
+      font-size: 3em;
+      padding-top: 2.2em
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    section.action {
+      background-position: 50% 61%
+    }
+    section.action h2 {
+      font-size: 3em;
+      padding-top: 2em
+    }
+  }
+  
+  html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    font-family: Roboto, sans-serif
+  }
+  
+  header,
+  nav,
+  section {
+    display: block
+  }
+  
+  a {
+    background: 0 0
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: .67em 0
+  }
+  
+  img {
+    border: 0
+  }
+  
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit
+  }
+  
+  header {
+    height: 7em;
+    background-image: url('./img/logo_sm.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 90%
+  }
+  
+  @media screen and (min-width: 640px) {
+    header {
+      height: 20em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('img/flappy-bird.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 90%
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    header {
+      height: 7.5em;
+      margin-bottom: -3em;
+      padding: 0;
+      background-image: url('img/flappy-bird.jpg');
+      background-size: 10%;
+      background-repeat: repeat
+    }
+  }
+  
+  nav {
+    text-align: center
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: -1em auto 0;
+    padding: .5em .7em;
+    background-color: #DDD896
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0
+  }
+  
+  nav ul li a {
+    padding: .5em .9em;
+    margin: 0 -.1em;
+    text-decoration: none;
+    color: #000
+  }
+  
+  @media screen and (min-width: 640px) {
+    nav ul {
+      padding: 1em 1.5em
+    }
+    nav ul li a {
+      margin: 0 1em;
+      padding: 2em
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    nav {
+      text-align: right
+    }
+    nav ul {
+      padding: 1em 2em
+    }
+    nav ul li a {
+      margin: 0 1em;
+      padding: 2em 0
+    }
+  }
+  
+  section.intro {
+    background-color: #6DD4E2;
+    margin: 0;
+    border-bottom: 2px solid #fff
+  }
+  
+  section.intro #logo_large {
+    width: 0;
+    height: 0;
+    margin: 0 20%
+  }
+  
+  section.intro h1 {
+    font-size: 1.4em;
+    margin: 0 .5em .5em;
+    padding-top: .7em;
+    line-height: 1.5em
+  }
+  
+  section.intro p {
+    text-align: right;
+    padding: 0 2em 2em 0;
+    margin: 0
+  }
+  
+  @media screen and (min-width: 640px) {
+    section.intro {
+      background-color: #71C5D0
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    section.intro {
+      background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, teal));
+      background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -o-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0, #71C5D0 35%, teal 100%);
+      background: radial-gradient(ellipse at center, #71C5D0 0, #71C5D0 35%, teal 100%);
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#71C5D0', endColorstr='#008080', GradientType=1)
+    }
+    section.intro #logo_large {
+      width: 700px;
+      height: 220px;
+      display: inline-block
+    }
+  }
+  
+  section.mid-section {
+    background-color: #DDD896;
+    border-bottom: 2px solid #fff
+  }
+  
+  section.mid-section h1 {
+    margin: 0;
+    padding: .9em;
+    font-size: 1.2em;
+    display: inline-block
+  }
+  
+  section.action {
+    height: 30em;
+    background-image: url('./img/pipes_bg.jpg');
+    background-size: cover;
+    text-align: center
+  }
+  
+  section.action #bird-flap {
+    position: absolute;
+    left: -50px;
+    background: url('./img/bird_sprite.png')2px 7px no-repeat;
+    background-size: 281%;
+    width: 39px;
+    height: 32px
+  }
+  
+  section.action h2 {
+    margin: 0;
+    font-size: 1.7em;
+    padding-top: 4em;
+    color: #F3AE2A;
+    text-shadow: 4px 4px 2px #969696
+  }
+  
+  @media screen and (min-width: 640px) {
+    section.action {
+      background-position: 50% 20%
+    }
+    section.action h2 {
+      font-size: 3em;
+      padding-top: 2.2em
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    section.action {
+      background-position: 50% 61%
+    }
+    section.action h2 {
+      font-size: 3em;
+      padding-top: 2em
+    }
+  }
+  </style>
+  <script>
+  (function(u) {
+    function loadCSS(e, t, n) {
+      "use strict";
+
+      function r() {
+        for (var t, i = 0; i < d.length; i++) d[i].href && d[i].href.indexOf(e) > -1 && (t = !0);
+        t ? o.media = n || "all" : setTimeout(r)
+      }
+      var o = window.document.createElement("link"),
+        i = t || window.document.getElementsByTagName("script")[0],
+        d = window.document.styleSheets;
+      return o.rel = "stylesheet", o.href = e, o.media = "only x", i.parentNode.insertBefore(o, i), r(), o
+    }
+    for (var i in u) {
+      loadCSS(u[i]);
+    }
+  }(['http://fonts.googleapis.com/css?family=Roboto', 'css/styles.css']));
+  </script>
+  <noscript>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
+  </noscript>
+</head>
+<header></header>
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Play</a></li>
+  </ul>
+</nav>
+<section class="intro">
+  <h1>You won&apos;t be able to put this one down.</h1><img id="logo_large" class="logo_large" width="700px" height="220px" src="img/Flappy_Bird_Logo_2.png" alt="Flappy Logo Large">
+  <p>Play flappy bird!</p>
+</section>
+<section class="mid-section">
+  <h1>Just Birds and Pipes...</h1></section>
+<section class="action"><span id="bird-flap"></span>
+  <div class="action-msg">
+    <h2>Limited Special Offer</h2>
+    <p>Your favorite bird, on summer special!</p>
+  </div>
+</section>
+<section class="social">
+  <h2>Find on Social Media</h2>
+  <ul>
+    <li>
+      <a href="#"><img src="img/facebook3.png" alt="Facebook"></a>
+    </li>
+    <li>
+      <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+    </li>
+    <li>
+      <a href="#"><img src="img/google-plus2.png" alt="Google+"></a>
+    </li>
+  </ul>
+</section>
+<footer></footer>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/velocity-animate/velocity.min.js"></script>
+<script src="../node_modules/velocity-animate/velocity.ui.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>

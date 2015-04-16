@@ -91,9 +91,10 @@ section.intro {
   background-color: $baby-blue;
   margin: 0;
   border-bottom: 2px solid #fff;
-  .logo_large {
-    display: none;
-    margin: 0 20%;
+  #logo_large {
+    width: 0;
+    height: 0;
+    margin: 0 25%;
   }
   h1 {
     font-size: 1.4em;
@@ -120,7 +121,9 @@ section.intro {
     background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* ie10+ */
     background: radial-gradient(ellipse at center, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71C5D0', endColorstr='#008080',GradientType=1 ); /* ie6-9 */
-    .logo_large {
+    #logo_large {
+      width: 700px;
+      height: 220px;
       display: inline-block;
     }
   }
@@ -190,10 +193,10 @@ section.action {
     background-position: 50% 61%;
     h2 {
       font-size: 3em;
-      padding-top: 2em;
+      padding-top: 3.5em;
     }
     p {
-      margin-top: 5.5em;
+      margin-top: 3.5em;
       font-size: 1.2em;
     }
   }
@@ -207,12 +210,13 @@ section.social {
   }
   ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 4em;
     padding: 0;
     padding-bottom: 2em;
     li {
       display: inline-block;
-      margin: 0 .5em;
+      margin: 0 3.5em;
+
       a {
         color: blue;
       }
@@ -228,18 +232,22 @@ section.social {
     }
   }
   @media screen and #{$desktop} {
-    height: 16em;
+    height: 24em;
     h2 {
       padding-top: 2em;
     }
-    li img {
-      margin-top: 3em;
+    li {
+      border: 2px solid #000;
+      border-radius: 10%;
+      img {
+        margin-top: 3em;
+      }
     }
   }
 }
 
+
 footer {
-  @include outer-container;
   background-image: url('../img/game_over.jpg');
   background-size: 89%;
   background-position: 40%;

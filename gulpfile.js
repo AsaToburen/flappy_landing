@@ -13,7 +13,7 @@ var buffer = require('vinyl-buffer');
 
 
 gulp.task('jshint', function() {
-  return gulp.src('site/js/main.js')
+  return gulp.src('site/js/app.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -31,7 +31,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('scripts', function() {
-  return browserify('./site/js/main.js')
+  return browserify('./site/js/app.js')
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
@@ -53,7 +53,7 @@ gulp.task('images', function() {
 
 
 gulp.task('watch', function() {
-  gulp.watch('site/js/main.js', ['jshint']);
+  gulp.watch('site/js/app.js', ['jshint']);
   gulp.watch('site/scss/**/*.scss', ['sass']);
 });
 

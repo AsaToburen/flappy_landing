@@ -214,7 +214,7 @@ section.intro {
   section.intro #logo_large {
     width: 0;
     height: 0;
-    margin: 0 25%; }
+    margin: 0 20%; }
   section.intro h1 {
     font-size: 1.4em;
     margin: .5em;
@@ -302,9 +302,9 @@ section.action {
       background-position: 50% 61%; }
       section.action h2 {
         font-size: 3em;
-        padding-top: 3.5em; }
+        padding-top: 2em; }
       section.action p {
-        margin-top: 3.5em;
+        margin-top: 5.5em;
         font-size: 1.2em; } }
 
 section.social {
@@ -314,12 +314,12 @@ section.social {
     margin-top: 0; }
   section.social ul {
     list-style-type: none;
-    margin-top: 4em;
+    margin: 0;
     padding: 0;
     padding-bottom: 2em; }
     section.social ul li {
       display: inline-block;
-      margin: 0 3.5em; }
+      margin: 0 .5em; }
       section.social ul li a {
         color: blue; }
   @media screen and (min-width: 640px) {
@@ -331,22 +331,26 @@ section.social {
         margin: 3em; } }
   @media screen and (min-width: 1024px) {
     section.social {
-      height: 24em; }
+      height: 16em; }
       section.social h2 {
         padding-top: 2em; }
-      section.social li {
-        border: 2px solid #000;
-        border-radius: 10%; }
-        section.social li img {
-          margin-top: 3em; } }
+      section.social li img {
+        margin-top: 3em; } }
 
 footer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('../img/game_over.jpg');
   background-size: 89%;
   background-position: 40%;
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 13em; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
   @media screen and (min-width: 1024px) {
     footer {
       background-position: 50% 50%;
