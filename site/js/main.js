@@ -30,14 +30,13 @@
       .velocity({
         translateX: 1400,
         translateY: 40
-      }, 1200)
-      .css('display', 'none');
+      }, 1200);
 
     //.css("background", "url('./img/bird_sprite.png') -78px 5px");
   };
 
 
-   var animateLog = 0;
+  var animateLog = 0;
 
   function birdListener(ev) {
     if (window.scrollY > 460 && animateLog === 0) {
@@ -47,11 +46,5 @@
   }
 
   window.onscroll = birdListener;
-
-  var $bird = document.getElementById('bird-flap');
-
-
-
-
 
 })();
