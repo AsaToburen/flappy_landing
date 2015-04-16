@@ -54,7 +54,7 @@
       animateLog++;
       animateBird();
     } else if (window.scrollY > 600) {
-      socialAnimate();
+      //socialAnimate();
     }
   }
 
