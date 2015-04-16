@@ -7,11 +7,15 @@ $turquoise: #71C5D0;
 $roboto: 'Roboto',
 sans-serif;
 //fix these
-$tablet: 'min-width: 768px';
-$desktop: 'min-width: 1024px';
+
+
+$tablet: "(min-width: 640px)";
+$desktop: "(min-width: 1024px)";
+
+
 body {
   width: 100%;
-  height: 50em;
+  height: 200em;
   font-family: $roboto;
 }
 
@@ -20,7 +24,7 @@ header {
   background-image: url('../img/logo_sm.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 90%;
-  @media screen and (min-width: 640px) {
+  @media screen and #{$tablet} {
     height: 20em;
     margin-bottom: -3em;
     padding: 0;
@@ -28,7 +32,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100% 90%;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and #{$desktop} {
     height: 7.5em;
     margin-bottom: -3em;
     padding: 0;
@@ -56,7 +60,7 @@ nav {
       }
     }
   }
-  @media screen and (min-width: 640px) {
+  @media screen and #{$tablet} {
     ul {
       padding: 1em 1.5em;
       li {
@@ -67,7 +71,7 @@ nav {
       }
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and #{$desktop} {
     text-align: right;
     ul {
       padding: 1em 2em;
@@ -91,6 +95,7 @@ section.intro {
   border-bottom: 2px solid #fff;
   .logo_large {
     display: none;
+    margin: 0 20%;
   }
   h1 {
     font-size: 1.4em;
@@ -104,20 +109,28 @@ section.intro {
     padding: 0 2em 2em 0;
     margin: 0;
   }
-  @media screen and (min-width: 640px) {
+  @media screen and #{$tablet} {
     background-color: $turquoise;
+
   }
-  @media screen and (min-width: 1024px) {
-    background-color: $turquoise;
+  @media screen and #{$desktop}{
+
+    background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, #008080)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, #71C5D0 0%, #71C5D0 35%, #008080 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71C5D0', endColorstr='#008080',GradientType=1 ); /* ie6-9 */
     .logo_large {
-      display: block;
-      margin: 0 auto;
+      display: inline-block;
     }
   }
+
 }
 
 section.mid-section {
-  background-color: $green;
+  background-color: $tan;
   border-bottom: 2px solid #fff;
   h1 {
     margin: 0;
@@ -133,25 +146,29 @@ section.mid-section {
     width: 44px;
     border-radius: 50%;
   }
+}
+
+section.action {
+  height: 30em;
+  background-image: url('../img/pipes_bg.jpg');
+  background-size: cover;
+  text-align: center;
   //url('../img/bird_sprite.png') -88px 5px
-  //url('../img/bird_sprite.png') -44px 5px
+  //url('../img/bird_sprite.png') -44px 5px 2px 7px
   #bird-flap {
-    background: url('../img/bird_sprite.png') 2px 5px;
-    background-size: 300%;
+    position: absolute;
+    left: -50px;
+    background: url('../img/bird_sprite.png') 2px 7px;
+    background-size: 281%;
     background-repeat: no-repeat;
+    width: 39px;
+    height: 32px;
     &:hover {
-      background: url('../img/bird_sprite.png') -88px 5px;
+      background: url('../img/bird_sprite.png') -78px 5px;
       background-size: 300%;
       background-repeat: no-repeat;
     }
   }
-}
-
-section.action {
-  height: 20em;
-  background-image: url('../img/pipes_bg.jpg');
-  background-size: cover;
-  text-align: center;
   h2 {
     margin: 0;
     font-size: 1.7em;
@@ -159,7 +176,8 @@ section.action {
     color: $yellow;
     text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
   }
-  @media screen and (min-width: 640px) {
+
+  @media screen and #{$tablet} {
     background-position: 50% 20%;
     h2 {
       font-size: 3em;
@@ -170,11 +188,11 @@ section.action {
       font-size: 1.2em;
     }
   }
-  @media screen and (min-width: 1024px) {
-    background-position: 50% 20%;
+  @media screen and #{$desktop} {
+    background-position: 50% 61%;
     h2 {
       font-size: 3em;
-      padding-top: 2.2em;
+      padding-top: 2em;
     }
     p {
       margin-top: 5.5em;
@@ -202,22 +220,22 @@ section.social {
       }
     }
   }
-  @media screen and (min-width: 640px) {
+  @media screen and #{$tablet} {
     height: 10em;
     h2 {
       padding-top: 2em;
     }
-    li a {
+    li img {
       margin: 3em;
     }
   }
-  @media screen and (min-width: 1024px) {
-    height: 10em;
+  @media screen and #{$desktop} {
+    height: 16em;
     h2 {
       padding-top: 2em;
     }
-    li a {
-      margin: 3em;
+    li img {
+      margin-top: 3em;
     }
   }
 }
@@ -230,7 +248,7 @@ footer {
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 13em;
-    @media screen and (min-width: 1024px) {
+    @media screen and #{$desktop} {
       background-position: 50% 50%;
       background-size: 50%;
     }

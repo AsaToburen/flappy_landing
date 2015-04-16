@@ -13,7 +13,7 @@ var buffer = require('vinyl-buffer');
 
 
 gulp.task('jshint', function() {
-  return gulp.src('site/js/*.js')
+  return gulp.src('site/js/main.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -53,7 +53,7 @@ gulp.task('images', function() {
 
 
 gulp.task('watch', function() {
-  gulp.watch('site/js/*.js', ['jshint']);
+  gulp.watch('site/js/main.js', ['jshint']);
   gulp.watch('site/scss/**/*.scss', ['sass']);
 });
 

@@ -25,6 +25,7 @@ var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 if (raf) raf(cb);
 else window.addEventListener('load', cb);
 </script> -->
+</body>
 <header>
 
 </header>
@@ -38,14 +39,14 @@ else window.addEventListener('load', cb);
 </nav>
 <section class="intro">
   <h1>You won't be able to put this one down.</h1>
-  <img class="logo_large" width="700px" height="220px" src="img/Flappy_Bird_Logo_2.png" alt="Flappy Logo Large">
+  <img id="logo_large" class="logo_large" width="700px" height="220px" src="img/Flappy_Bird_Logo_2.png" alt="Flappy Logo Large">
   <p>Play flappy bird!</p>
 </section>
 <section class="mid-section">
   <h1>Just Birds and Pipes...</h1>
-  <span id="bird-flap"></span>
 </section>
 <section class="action">
+  <span id="bird-flap"></span>
   <div class="action-msg">
     <h2>Limited Special Offer</h2>
     <p>Your favorite bird, on summer special!</p>
@@ -54,15 +55,16 @@ else window.addEventListener('load', cb);
 <section class="social">
   <h2>Find on Social Media</h2>
   <ul>
-    <li><a href="">Twitter</a></li>
-    <li><a href="">Facebook</a></li>
-    <li><a href="">Google</a></li>
+    <li><a href=""><img src="img/PNG/facebook3.png" alt="Facebook"></a></li>
+    <li><a href=""><img src="img/twitter.png" alt="Twitter"></a></li>
+    <li><a href=""><img src="img/PNG/google-plus2.png" alt="Google+"></a></li>
   </ul>
 </section>
 <footer>
 </footer>
-
-<body>
 </body>
-
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/velocity.ui.min.js"></script>
+<script src="js/main.js"></script>
 </html>

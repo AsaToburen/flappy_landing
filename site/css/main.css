@@ -150,7 +150,7 @@ html {
 
 body {
   width: 100%;
-  height: 50em;
+  height: 200em;
   font-family: 'Roboto', sans-serif; }
 
 header {
@@ -213,7 +213,8 @@ section.intro {
   margin: 0;
   border-bottom: 2px solid #fff; }
   section.intro .logo_large {
-    display: none; }
+    display: none;
+    margin: 0 20%; }
   section.intro h1 {
     font-size: 1.4em;
     margin: .5em;
@@ -229,13 +230,25 @@ section.intro {
       background-color: #71C5D0; } }
   @media screen and (min-width: 1024px) {
     section.intro {
-      background-color: #71C5D0; }
+      background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+      /* ff3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, #008080));
+      /* safari4+,chrome */
+      background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+      /* safari5.1+,chrome10+ */
+      background: -o-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+      /* opera 11.10+ */
+      background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+      /* ie10+ */
+      background: radial-gradient(ellipse at center, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+      /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71C5D0', endColorstr='#008080',GradientType=1 );
+      /* ie6-9 */ }
       section.intro .logo_large {
-        display: block;
-        margin: 0 auto; } }
+        display: inline-block; } }
 
 section.mid-section {
-  background-color: #7CBF39;
+  background-color: #DDD896;
   border-bottom: 2px solid #fff; }
   section.mid-section h1 {
     margin: 0;
@@ -249,20 +262,24 @@ section.mid-section {
     float: right;
     width: 44px;
     border-radius: 50%; }
-  section.mid-section #bird-flap {
-    background: url('../img/bird_sprite.png') 2px 5px;
-    background-size: 300%;
-    background-repeat: no-repeat; }
-    section.mid-section #bird-flap:hover {
-      background: url('../img/bird_sprite.png') -88px 5px;
-      background-size: 300%;
-      background-repeat: no-repeat; }
 
 section.action {
-  height: 20em;
+  height: 30em;
   background-image: url('../img/pipes_bg.jpg');
   background-size: cover;
   text-align: center; }
+  section.action #bird-flap {
+    position: absolute;
+    left: -50px;
+    background: url('../img/bird_sprite.png') 2px 7px;
+    background-size: 281%;
+    background-repeat: no-repeat;
+    width: 39px;
+    height: 32px; }
+    section.action #bird-flap:hover {
+      background: url('../img/bird_sprite.png') -78px 5px;
+      background-size: 300%;
+      background-repeat: no-repeat; }
   section.action h2 {
     margin: 0;
     font-size: 1.7em;
@@ -280,10 +297,10 @@ section.action {
         font-size: 1.2em; } }
   @media screen and (min-width: 1024px) {
     section.action {
-      background-position: 50% 20%; }
+      background-position: 50% 61%; }
       section.action h2 {
         font-size: 3em;
-        padding-top: 2.2em; }
+        padding-top: 2em; }
       section.action p {
         margin-top: 5.5em;
         font-size: 1.2em; } }
@@ -308,15 +325,15 @@ section.social {
       height: 10em; }
       section.social h2 {
         padding-top: 2em; }
-      section.social li a {
+      section.social li img {
         margin: 3em; } }
   @media screen and (min-width: 1024px) {
     section.social {
-      height: 10em; }
+      height: 16em; }
       section.social h2 {
         padding-top: 2em; }
-      section.social li a {
-        margin: 3em; } }
+      section.social li img {
+        margin-top: 3em; } }
 
 footer {
   max-width: 68em;
