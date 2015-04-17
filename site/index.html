@@ -10,6 +10,10 @@
   <link rel="icon" type="image/ico" href="img/flappy_ico.ico">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
+  <script>
+  document.createElement("picture");
+  </script>
+  <script src="vendor/picturefill.min.js" async></script>
 </head>
 </body>
 <header>
@@ -24,8 +28,12 @@
 </nav>
 <section class="intro">
   <h1>You won't be able to put this one down.</h1>
-  <img id="logo_large" class="logo_large" width="700px" height="220px" src="img/Flappy_Bird_Logo_2.png" alt="Flappy Logo Large">
-  <p>Play flappy bird!</p>
+  <picture>
+      <source srcset="img/flappy_logo_lg.png" media="(min-width: 1024)">
+      <source srcset="img/flappy_logo_md.png" media="(min-width: 640px)">
+      <source srcset="img/flappy_logo_sm.png" media="(min-width: 320px)">
+      <img class="logo_large" srcset="img/flappy_logo_md.png" alt="Flappy Logo">
+  </picture>
 </section>
 <section class="mid-section">
   <h1>Just Birds and Pipes...</h1>
@@ -38,16 +46,37 @@
   </div>
 </section>
 <section class="social">
-  <h2>Find on Social Media</h2>
+  <h2 class="social-heading">Find on Social Media</h2>
   <ul>
     <li>
-      <a href="#"><img src="img/facebook3.png" alt="Facebook"></a>
+      <a href="#">
+        <picture>
+          <source srcset="img/icons/reddit_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/icons/reddit_md.png" media="(min-width: 640px)">
+              <source srcset="img/icons/reddit_sm.png" media="(min-width: 360px)">
+                <img srcset="img/icons/reddit_md.png" alt="Reddit">
+        </picture>
+      </a>
     </li>
     <li>
-      <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+      <a href="#">
+        <picture>
+          <source srcset="img/icons/twitter_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/icons/twitter_md.png" media="(min-width: 640px)">
+              <source srcset="img/icons/twitter_sm.png" media="(min-width: 360px)">
+                <img srcset="img/icons/twitter_md.png" alt="Twitter">
+        </picture>
+      </a>
     </li>
     <li>
-      <a href="#"><img src="img/google-plus2.png" alt="Google+"></a>
+      <a href="#">
+        <picture>
+          <source srcset="img/icons/google+_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/icons/google+_md.png" media="(min-width: 640px)">
+              <source srcset="img/icons/google+_sm.png" media="(min-width: 360px)">
+                <img srcset="img/icons/google+.png" alt="Google+">
+        </picture>
+      </a>
     </li>
   </ul>
 </section>
@@ -57,6 +86,6 @@
 <script src="vendor/jquery.min.js"></script>
 <script src="vendor/velocity.min.js"></script>
 <script src="vendor/velocity.ui.min.js"></script>
-<script src="js/app.js"></script>
+<script defer src="js/app.js"></script>
 
 </html>

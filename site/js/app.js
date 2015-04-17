@@ -2,8 +2,14 @@
 
   $(".logo_large").velocity("transition.slideUpIn", {
     opacity: [1, 0],
+    display: "block",
     duration: 2000
   });
+
+  $('section.social h2').velocity('transition.slideDownIn', {
+        opacity: [1, 0],
+        duration: 1200
+      });
 
   var animateBird = function() {
 
@@ -24,11 +30,11 @@
         translateY: 270
       }, 900)
       .velocity({
-        translateX: 1200,
-        translateY: 80
+        translateX: 1000,
+        translateY: 60
       }, 1000)
       .velocity({
-        translateX: 1600,
+        translateX: 1400,
         translateY: 40
       }, 1200);
 
@@ -53,23 +59,12 @@
     if (window.scrollY > 460 && animateLog === 0) {
       animateLog++;
       animateBird();
-    } else if (window.scrollY > 600) {
-      //socialAnimate();
+    } else if(window.scrollY > 700) {
+      
     }
   }
 
   window.onscroll = scrollListener;
-
-  $(".logo_large").velocity("transition.slideUpIn", {
-    opacity: [1, 0],
-    duration: 2000
-  });
-
-
-
-
-
-
 
 
 

@@ -154,15 +154,13 @@ body {
 
 header {
   height: 7em;
-  background-image: url('../img/logo_sm.jpeg');
   background-repeat: no-repeat;
-  background-size: 100% 90%; }
+  background-size: 100% 90%;
+  background-color: #6DD4E2; }
   @media screen and (min-width: 640px) {
     header {
-      height: 20em;
       margin-bottom: -3em;
       padding: 0;
-      background-image: url('../img/flappy-bird.jpg');
       background-repeat: no-repeat;
       background-size: 100% 90%; } }
   @media screen and (min-width: 1024px) {
@@ -170,7 +168,6 @@ header {
       height: 7.5em;
       margin-bottom: -3em;
       padding: 0;
-      background-image: url('../img/flappy-bird.jpg');
       background-size: 10%;
       background-repeat: repeat; } }
 
@@ -208,13 +205,30 @@ nav {
             text-shadow: 2px 2px 1px #969696; } }
 
 section.intro {
-  background-color: #6DD4E2;
+  background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, #008080));
+  /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+  /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+  /* ie10+ */
+  background: radial-gradient(ellipse at center, #71C5D0 0%, #71C5D0 35%, #008080 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71C5D0', endColorstr='#008080',GradientType=1 );
+  /* ie6-9 */
   margin: 0;
-  border-bottom: 2px solid #fff; }
-  section.intro #logo_large {
-    width: 0;
-    height: 0;
-    margin: 0 25%; }
+  margin-top: -.5em;
+  border-bottom: 2px solid #fff;
+  height: 24em; }
+  section.intro .logo_large {
+    display: block;
+    margin: 0% auto; }
+  section.intro img {
+    display: block;
+    margin: 0 auto; }
   section.intro h1 {
     font-size: 1.4em;
     margin: .5em;
@@ -227,27 +241,15 @@ section.intro {
     margin: 0; }
   @media screen and (min-width: 640px) {
     section.intro {
-      background-color: #71C5D0; } }
+      background-color: #71C5D0;
+      height: 21em; }
+      section.intro img {
+        display: block; } }
   @media screen and (min-width: 1024px) {
-    section.intro {
-      background: -moz-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
-      /* ff3.6+ */
-      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #71C5D0), color-stop(35%, #71C5D0), color-stop(100%, #008080));
-      /* safari4+,chrome */
-      background: -webkit-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
-      /* safari5.1+,chrome10+ */
-      background: -o-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
-      /* opera 11.10+ */
-      background: -ms-radial-gradient(center, ellipse cover, #71C5D0 0%, #71C5D0 35%, #008080 100%);
-      /* ie10+ */
-      background: radial-gradient(ellipse at center, #71C5D0 0%, #71C5D0 35%, #008080 100%);
-      /* w3c */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71C5D0', endColorstr='#008080',GradientType=1 );
-      /* ie6-9 */ }
-      section.intro #logo_large {
-        width: 700px;
-        height: 220px;
-        display: inline-block; } }
+    section.intro .logo_large {
+      width: 700px;
+      height: 220px;
+      display: block; } }
 
 section.mid-section {
   background-color: #DDD896;
@@ -293,7 +295,7 @@ section.action {
       background-position: 50% 20%; }
       section.action h2 {
         font-size: 3em;
-        padding-top: 2.2em; }
+        padding-top: 3.2em; }
       section.action p {
         margin-top: 3.5em;
         font-size: 1.2em; } }
@@ -324,18 +326,20 @@ section.social {
         color: blue; }
   @media screen and (min-width: 640px) {
     section.social {
-      height: 10em; }
+      height: 17em; }
       section.social h2 {
         padding-top: 2em; }
+      section.social ul {
+        margin-top: 0; }
       section.social li img {
         margin: 3em; } }
   @media screen and (min-width: 1024px) {
     section.social {
-      height: 24em; }
+      height: 31em; }
       section.social h2 {
-        padding-top: 2em; }
+        padding-top: 2em;
+        font-size: 2em; }
       section.social li {
-        border: 2px solid #000;
         border-radius: 10%; }
         section.social li img {
           margin-top: 3em; } }
@@ -347,7 +351,13 @@ footer {
   background-repeat: no-repeat;
   margin: 0 auto;
   height: 13em; }
+  @media screen and (min-width: 640px) {
+    footer {
+      background-position: 50% 50%;
+      background-size: 50%;
+      height: 20em; } }
   @media screen and (min-width: 1024px) {
     footer {
       background-position: 50% 50%;
-      background-size: 50%; } }
+      background-size: 50%;
+      height: 25em; } }

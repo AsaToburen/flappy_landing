@@ -10,6 +10,8 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var critical = require('critical');
+
 
 
 gulp.task('jshint', function() {
@@ -51,6 +53,25 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('copystyles', function(){
+  gulp.src(['build/css/styles.css'])
+    .pipe(rename({
+      basename: "site"
+    }))
+    .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('critical', ['build', 'copystyles'], function () {
+  critical.generateInline({
+    base: 'build/',
+    src: 'index.html',
+    styleTarget: 'css/styles.css',
+    htmlTarget: 'index.html',
+    width: 320,
+    height: 480,
+    minify: true
+  });
+});
 
 gulp.task('watch', function() {
   gulp.watch('site/js/app.js', ['jshint']);
