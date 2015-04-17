@@ -196,10 +196,10 @@ nav {
     nav {
       text-align: right; }
       nav ul {
-        padding: 1em 2em; }
+        padding: 1.5em 2em; }
         nav ul li a {
           margin: 0 1em;
-          padding: 2em 0em; }
+          padding: 2em 0; }
           nav ul li a:hover {
             color: #D95019;
             text-shadow: 2px 2px 1px #969696; } }
@@ -342,7 +342,8 @@ section.social {
       section.social li {
         border-radius: 10%; }
         section.social li img {
-          margin-top: 3em; } }
+          margin-top: 5em;
+          width: 40%; } }
 
 footer {
   background-image: url('../img/game_over.jpg');

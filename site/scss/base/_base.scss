@@ -69,11 +69,11 @@ nav {
   @media screen and #{$desktop} {
     text-align: right;
     ul {
-      padding: 1em 2em;
+      padding: 1.5em 2em;
       li {
         a {
           margin: 0 1em;
-          padding: 2em 0em;
+          padding: 2em 0;
           &:hover {
             color: $orange;
             text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
@@ -247,7 +247,8 @@ section.social {
     li {
       border-radius: 10%;
       img {
-        margin-top: 3em;
+        margin-top: 5em;
+        width: 40%;
       }
     }
   }
