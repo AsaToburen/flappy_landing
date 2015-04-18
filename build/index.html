@@ -1,3 +1,99 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><title>Flappy Bird Clone Landing Page</title><meta name=description content="A brief description of your site"><meta name=viewport content="width=device-width, initial-scale=1"><link rel=icon type=image/ico href=img/flappy_ico.ico><link href="http://fonts.googleapis.com/css?family=Roboto" rel=stylesheet type=text/css><link rel=stylesheet href=css/main.css><script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Flappy Bird Clone Landing Page</title>
+  <meta name="description" content="A brief description of your site">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="img/flappy_ico.ico">
+  <style type="text/css">
+img{border:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;box-sizing:border-box}body{margin:0;width:100%;font-family:Roboto,sans-serif}header,nav,section{display:block}a{background:0 0}h1{font-size:2em;margin:.67em 0}*,::after,::before{box-sizing:inherit}header{height:2em;background-repeat:no-repeat;background-size:100% 90%;background-color:#6DD4E2}@media screen and (min-width:640px){header{height:7em;margin-bottom:-3em;padding:0;background-repeat:no-repeat;background-size:100% 90%}}@media screen and (min-width:1024px){header{height:7.5em;margin-bottom:-3em;padding:0;background-size:10%;background-repeat:repeat}}nav{text-align:center}nav ul{-moz-box-shadow:inset 0 0 5px #000;-webkit-box-shadow:inset 0 0 5px #000;box-shadow:inset 0 0 5px #000;list-style-type:none;margin:-1em auto 0;padding:1em 1.5em;background-color:#515e78}nav ul li{display:inline-block;margin:0}nav ul li a{padding:.5em .9em;margin:0 -.1em;text-decoration:none;color:#FFF}@media screen and (min-width:640px){nav ul{padding:1em 1.5em}nav ul li a{margin:0 1em;padding:2em}}@media screen and (min-width:1024px){nav{text-align:right}nav ul{padding:1.5em 2em}nav ul li a{margin:0 1em;padding:2em 0}}section.intro{background:-moz-radial-gradient(center,ellipse cover,#71C5D0 0,#71C5D0 35%,teal 100%);background:-webkit-gradient(radial,center center,0,center center,100%,color-stop(0,#71C5D0),color-stop(35%,#71C5D0),color-stop(100%,teal));background:-webkit-radial-gradient(center,ellipse cover,#71C5D0 0,#71C5D0 35%,teal 100%);background:-o-radial-gradient(center,ellipse cover,#71C5D0 0,#71C5D0 35%,teal 100%);background:-ms-radial-gradient(center,ellipse cover,#71C5D0 0,#71C5D0 35%,teal 100%);background:radial-gradient(ellipse at center,#71C5D0 0,#71C5D0 35%,teal 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#71C5D0', endColorstr='#008080', GradientType=1);margin:-.5em 0 0;border-bottom:2px solid #fff;height:15em}section.intro .logo_large{display:block;margin:2% auto}section.intro img{display:block;margin:0 auto}section.intro h1{font-size:1.4em;margin:0 .5em .5em;padding-top:.7em;line-height:1.5em}@media screen and (min-width:640px){section.intro{background-color:#71C5D0;height:21em}section.intro img{display:block;margin:2% auto}}@media screen and (min-width:1024px){section.intro{height:21em}section.intro .logo_large{width:700px;height:220px;display:block;margin:0 auto}}section.mid-section{background-color:#DDD896;border-bottom:2px solid #fff}section.mid-section h1{margin:0;padding:.9em;font-size:1.2em;display:inline-block}section.action{height:30em;background-image:url(/img/pipes_bg_sm.png);background-size:cover;text-align:center}section.action #bird-flap{position:absolute;left:-50px;background:url(/img/bird_sprite.png)2px 7px no-repeat;background-size:281%;width:39px;height:32px}section.action h2{margin:0;font-size:1.7em;padding-top:4em;color:#F3AE2A;text-shadow:4px 4px 2px #969696}@media screen and (min-width:640px){section.action{background-position:50% 20%;background-image:url(/img/pipes_bg.jpg)}section.action h2{font-size:3em;padding-top:3.2em}}@media screen and (min-width:1024px){section.action{background-position:50% 61%;background-image:url(/img/pipes_bg.jpg)}section.action h2{font-size:3em;padding-top:3.5em}}
+</style>
+<script>
+(function(u){function loadCSS(e,t,n){"use strict";function r(){for(var t,i=0;i<d.length;i++)d[i].href&&d[i].href.indexOf(e)>-1&&(t=!0);t?o.media=n||"all":setTimeout(r)}var o=window.document.createElement("link"),i=t||window.document.getElementsByTagName("script")[0],d=window.document.styleSheets;return o.rel="stylesheet",o.href=e,o.media="only x",i.parentNode.insertBefore(o,i),r(),o}for(var i in u){loadCSS(u[i]);}}(['http://fonts.googleapis.com/css?family=Roboto','css/main.css']));
+</script>
+<noscript>
+<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/main.css">
+</noscript>
+  
+  <script>
   document.createElement("picture");
-  </script><script src=js/picture.js></script></head><header></header><nav><ul><li><a href=#>Home</a></li><li><a href=#>About</a></li><li><a href=#>Contact</a></li><li><a href=#>Play</a></li></ul></nav><section class=intro><h1>You won't be able to put this one down.</h1><picture><source srcset=img/flappy_logo_lg.png media="(min-width: 1024)"><source srcset=img/flappy_logo_md.png media="(min-width: 740px)"><source srcset=img/flappy_logo_sm.png media="(min-width: 320px)"><img class=logo_large srcset=img/flappy_logo_md.png alt="Flappy Logo"></picture></section><section class=mid-section><h1>Just Birds and Pipes...</h1></section><section class=action><span id=bird-flap></span><div class=action-msg><h2>Limited Special Offer</h2><p>Your favorite bird, on summer special!</p></div></section><section class=social><h2 class=social-heading>Find on Social Media</h2><ul><li><a href=#><picture><source srcset=img/icons/reddit_lg.png media="(min-width: 1024px)"><source srcset=img/icons/reddit_md.png media="(min-width: 640px)"><source srcset=img/icons/reddit_sm.png media="(min-width: 360px)"><img srcset=img/icons/reddit_md.png alt=Reddit></picture></a></li><li><a href=#><picture><source srcset=img/icons/twitter_lg.png media="(min-width: 1024px)"><source srcset=img/icons/twitter_md.png media="(min-width: 640px)"><source srcset=img/icons/twitter_sm.png media="(min-width: 360px)"><img srcset=img/icons/twitter_md.png alt=Twitter></picture></a></li><li><a href=#><picture><source srcset=img/icons/google+_lg.png media="(min-width: 1024px)"><source srcset=img/icons/google+_md.png media="(min-width: 640px)"><source srcset=img/icons/google+_sm.png media="(min-width: 360px)"><img srcset=img/icons/google+.png alt=Google+></picture></a></li></ul></section><footer></footer><script src=js/vendor.js></script><script src=js/app.js></script></html>
+  </script>
+  <script src="js/picture.js"></script>
+</head>
+
+<header>
+</header>
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Play</a></li>
+  </ul>
+</nav>
+<section class="intro">
+  <h1>You won&apos;t be able to put this one down.</h1>
+  <picture>
+      <source srcset="img/flappy_logo_lg.png" media="(min-width: 1024)">
+      <source srcset="img/flappy_logo_md.png" media="(min-width: 740px)">
+      <source srcset="img/flappy_logo_sm.png" media="(min-width: 320px)">
+      <img class="logo_large" srcset="img/flappy_logo_md.png" alt="Flappy Logo">
+  </picture>
+</section>
+<section class="mid-section">
+  <h1>Just Birds and Pipes...</h1>
+</section>
+<section class="action">
+  <span id="bird-flap"></span>
+  <div class="action-msg">
+    <h2>Limited Special Offer</h2>
+    <p>Your favorite bird, on summer special!</p>
+  </div>
+</section>
+<section class="social">
+  <h2 class="social-heading">Find on Social Media</h2>
+  <ul>
+    <li>
+      <a href="#">
+        <picture>
+          <source srcset="img/reddit_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/reddit_md.png" media="(min-width: 640px)">
+              <source srcset="img/reddit_sm.png" media="(min-width: 360px)">
+                <img srcset="img/reddit_md.png" alt="Reddit">
+        </picture>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <picture>
+          <source srcset="img/twitter_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/twitter_md.png" media="(min-width: 640px)">
+              <source srcset="img/twitter_sm.png" media="(min-width: 360px)">
+                <img srcset="img/twitter_md.png" alt="Twitter">
+        </picture>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <picture>
+          <source srcset="img/google+_lg.png" media="(min-width: 1024px)">
+            <source srcset="img/google+_md.png" media="(min-width: 640px)">
+              <source srcset="img/google+_sm.png" media="(min-width: 360px)">
+                <img srcset="img/google+.png" alt="Google+">
+        </picture>
+      </a>
+    </li>
+  </ul>
+</section>
+<footer>
+</footer>
+
+
+<script src="js/vendor.js"></script>
+
+<script src="js/app.js"></script>
+
+</html>
