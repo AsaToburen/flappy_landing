@@ -217,6 +217,30 @@ section.action {
   }
 }
 
+section.game-info {
+  height: 30em;
+  padding: 4em;
+  text-align: center;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    li {
+      width: 25%;
+      margin: 0 2em;
+      padding: 1em;
+      display: inline-block;
+      border: 3px solid $baby-blue;
+      border-radius: 5%;
+
+      p {
+        line-height: 1.3em;
+      }
+    }
+  }
+}
+
+
 section.social {
   text-align: center;
   background-color: $tan;

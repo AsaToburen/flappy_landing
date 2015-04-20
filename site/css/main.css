@@ -319,6 +319,24 @@ section.action {
         margin-top: 3.5em;
         font-size: 1.2em; } }
 
+section.game-info {
+  height: 30em;
+  padding: 4em;
+  text-align: center; }
+  section.game-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; }
+    section.game-info ul li {
+      width: 25%;
+      margin: 0 2em;
+      padding: 1em;
+      display: inline-block;
+      border: 3px solid #6DD4E2;
+      border-radius: 5%; }
+      section.game-info ul li p {
+        line-height: 1.3em; }
+
 section.social {
   text-align: center;
   background-color: #DDD896;

@@ -25,7 +25,6 @@ gulp.task('index', function(){
     .pipe(gulpif('*.css', minifyCss()))
     .pipe(assets.restore())
     .pipe(useref())
-    //.pipe(gulpif(''minifyHTML())
     .pipe(gulp.dest('build'));
 });
 
