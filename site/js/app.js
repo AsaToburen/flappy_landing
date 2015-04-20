@@ -1,4 +1,3 @@
-
 (function() {
 
   $(".logo_large").velocity("transition.slideUpIn", {
@@ -8,9 +7,9 @@
   });
 
   $('section.social h2').velocity('transition.slideDownIn', {
-        opacity: [1, 0],
-        duration: 1200
-      });
+    opacity: [1, 0],
+    duration: 1200
+  });
 
   var animateBird = function() {
 
@@ -43,24 +42,42 @@
   };
 
 
-  //var socialAnimate = function() {
-  //  $('section.social li')
-  //    .velocity("transition.slideLeftIn", {
-  //      stagger: 250
-  //    })
-  //    .delay(750)
-  //    .velocity({
-  //      opacity: 0
-  //    }, 750);
-  //};
+  var gameInfo = function() {
+    var infoItems = $('li');
+
+    $(".game-info").find(infoItems)
+      .velocity("transition.slideLeftIn", {
+        stagger: 280
+      })
+      .delay(1750)
+      .velocity({}, 1050);
+  };
+
+  gameInfo();
+
+
+  //$(window).one('scroll', function() {
+  //  console.log($(this).scrollTop());
+  //});
+
+  $('.game-info').find('li h2').click(function() {
+    console.log('clicked');
+    var heading = this;
+    
+    var section = $('section.game-info');
+    $(this).next().css('display', 'block').velocity('transition.slideDownIn', 1200);
+    $(section).css( "height", "+=120px" );
+  });
 
   var animateLog = 0;
 
   function scrollListener(ev) {
-    if (window.scrollY > 460 && animateLog === 0) {
+    if (window.scrollY > 430 && animateLog === 0) {
       animateLog++;
       animateBird();
-    } else if(window.scrollY > 700) {
+    } else if (window.scrollY > 700) {
+      console.log(700);
+    } else if (window.scrollY > 855) {
       
     }
   }

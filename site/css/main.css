@@ -310,7 +310,7 @@ section.action {
         font-size: 1.2em; } }
   @media screen and (min-width: 1024px) {
     section.action {
-      background-position: 50% 61%;
+      background-position: 50% 65%;
       background-image: url('../img/pipes_bg.jpg'); }
       section.action h2 {
         font-size: 3em;
@@ -320,22 +320,85 @@ section.action {
         font-size: 1.2em; } }
 
 section.game-info {
-  height: 30em;
-  padding: 4em;
-  text-align: center; }
+  height: 33em;
+  padding: 3.2em;
+  text-align: center;
+  background: #74be2f;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #74be2f 0%, #74be2f 0%, #74be2f 1%, #74be2f 1%, #ffffff 83%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #74be2f), color-stop(0%, #74be2f), color-stop(1%, #74be2f), color-stop(1%, #74be2f), color-stop(83%, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #74be2f 0%, #74be2f 0%, #74be2f 1%, #74be2f 1%, #ffffff 83%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #74be2f 0%, #74be2f 0%, #74be2f 1%, #74be2f 1%, #ffffff 83%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #74be2f 0%, #74be2f 0%, #74be2f 1%, #74be2f 1%, #ffffff 83%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #74be2f 0%, #74be2f 0%, #74be2f 1%, #74be2f 1%, #ffffff 83%);
+  /* W3C */ }
   section.game-info ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0 auto; }
+    padding: 0; }
     section.game-info ul li {
-      width: 25%;
-      margin: 0 2em;
-      padding: 1em;
-      display: inline-block;
+      background-color: #fff;
+      padding: .5em;
       border: 3px solid #6DD4E2;
-      border-radius: 5%; }
+      border-radius: 5%;
+      margin-bottom: 1em; }
+      section.game-info ul li h2 {
+        margin: 0;
+        color: #000;
+        padding-top: .5em;
+        padding-left: .5em;
+        background-color: #DDD896; }
       section.game-info ul li p {
-        line-height: 1.3em; }
+        display: none; }
+  @media screen and (min-width: 640px) {
+    section.game-info {
+      height: 21em;
+      padding: 1em; }
+      section.game-info ul {
+        text-align: left; }
+        section.game-info ul li {
+          margin: 1em auto;
+          width: 88%;
+          padding: .2em;
+          border-radius: 0%; }
+          section.game-info ul li h2 {
+            margin: 0;
+            color: #000;
+            padding-top: .5em;
+            padding-left: .5em;
+            background-color: #DDD896; }
+        section.game-info ul p {
+          padding: 0 2em;
+          line-height: 2em; } }
+  @media screen and (min-width: 1024px) {
+    section.game-info {
+      padding: 4em 0em;
+      height: 36em; }
+      section.game-info ul {
+        margin-left: 5.5%; }
+        section.game-info ul li {
+          width: 28%;
+          padding: .5em .5em;
+          display: inline-block;
+          margin: 0 1.5em;
+          line-height: 1.9em;
+          max-height: 21em;
+          float: left;
+          border-radius: 5%; }
+          section.game-info ul li h2 {
+            color: #6DD4E2;
+            background-color: #fff;
+            border-bottom: 2px solid #515e78;
+            padding-bottom: .5em;
+            width: 100%;
+            margin-bottom: 0; }
+          section.game-info ul li p {
+            line-height: 1.6em;
+            display: block; } }
 
 section.social {
   text-align: center;
@@ -344,10 +407,11 @@ section.social {
   -webkit-box-shadow: inset 4px 2px -2px #000000;
   box-shadow: inset 4px 2px -2px #000000; }
   section.social h2 {
-    margin-top: 0; }
+    margin-top: 0;
+    padding-top: 1.5em; }
   section.social ul {
     list-style-type: none;
-    margin-top: 4em;
+    margin-top: 2.5em;
     padding: 0;
     padding-bottom: 2em; }
     section.social ul li {
