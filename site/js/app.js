@@ -6,10 +6,28 @@
     duration: 2000
   });
 
-  $('section.social h2').velocity('transition.slideDownIn', {
-    opacity: [1, 0],
-    duration: 1200
-  });
+  var controller = new ScrollMagic.Controller();
+
+  var scene = new ScrollMagic.Scene({
+      triggerElement: 'section.social'
+    })
+    .setVelocity('section.social h2', 'transition.slideDownIn', {
+      opacity: [1, 0]
+    }, {
+      duration: 600
+    })
+    //.addIndicators()
+    .addTo(controller);
+
+  var gameInfo = new ScrollMagic.Scene({
+      triggerElement: 'section.game-info'
+    })
+    .setVelocity('.game-info li', 'transition.slideLeftIn', {
+      opacity: 1,
+      duration: 1000
+    })
+    //.addIndicators()
+    .addTo(controller);
 
   var animateBird = function() {
 
@@ -41,49 +59,23 @@
     //.css("background", "url('./img/bird_sprite.png') -78px 5px");
   };
 
+  var animateLog = 0;
 
-  var gameInfo = function() {
-    var infoItems = $('li');
-
-    $(".game-info").find(infoItems)
-      .velocity("transition.slideLeftIn", {
-        stagger: 280
-      })
-      .delay(1750)
-      .velocity({}, 1050);
-  };
-
-  gameInfo();
-
-
-  //$(window).one('scroll', function() {
-  //  console.log($(this).scrollTop());
-  //});
+  function scrollListener(ev) {
+    if (window.scrollY > 208 && animateLog === 0) {
+      animateLog++;
+      animateBird();
+    }
+  }
+  window.onscroll = scrollListener;
 
   $('.game-info').find('li h2').click(function() {
     console.log('clicked');
     var heading = this;
-    
+
     var section = $('section.game-info');
     $(this).next().css('display', 'block').velocity('transition.slideDownIn', 1200);
-    $(section).css( "height", "+=120px" );
+    $(section).css("height", "+=120px");
   });
-
-  var animateLog = 0;
-
-  function scrollListener(ev) {
-    if (window.scrollY > 430 && animateLog === 0) {
-      animateLog++;
-      animateBird();
-    } else if (window.scrollY > 700) {
-      console.log(700);
-    } else if (window.scrollY > 855) {
-      
-    }
-  }
-
-  window.onscroll = scrollListener;
-
-
 
 })();

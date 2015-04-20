@@ -166,7 +166,7 @@ header {
       background-size: 100% 90%; } }
   @media screen and (min-width: 1024px) {
     header {
-      height: 7.5em;
+      height: 5.5em;
       margin-bottom: -3em;
       padding: 0;
       background-size: 10%;
@@ -345,7 +345,8 @@ section.game-info {
       padding: .5em;
       border: 3px solid #6DD4E2;
       border-radius: 5%;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      display: none; }
       section.game-info ul li h2 {
         margin: 0;
         color: #000;
@@ -383,7 +384,7 @@ section.game-info {
         section.game-info ul li {
           width: 28%;
           padding: .5em .5em;
-          display: inline-block;
+          display: none;
           margin: 0 1.5em;
           line-height: 1.9em;
           max-height: 21em;
@@ -408,7 +409,9 @@ section.social {
   box-shadow: inset 4px 2px -2px #000000; }
   section.social h2 {
     margin-top: 0;
-    padding-top: 1.5em; }
+    padding-top: 1.5em;
+    display: hidden;
+    opacity: 0; }
   section.social ul {
     list-style-type: none;
     margin-top: 2.5em;
