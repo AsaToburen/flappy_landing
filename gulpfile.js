@@ -21,6 +21,7 @@ gulp.task('index', function(){
 
   return gulp.src('site/*.html')
     .pipe(assets)
+    .pipe(gulpif('*.html', minifyHTML()))
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', minifyCss()))
     .pipe(assets.restore())

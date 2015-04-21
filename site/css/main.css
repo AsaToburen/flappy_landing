@@ -180,7 +180,7 @@ nav {
     box-shadow: inset 0 0 5px #000000;
     list-style-type: none;
     margin: -1em auto 0 auto;
-    padding: 1em 1.5em;
+    padding: 1em;
     background-color: #515e78; }
     nav ul li {
       display: inline-block;
@@ -320,7 +320,7 @@ section.action {
         font-size: 1.2em; } }
 
 section.game-info {
-  height: 33em;
+  height: 26em;
   padding: 3.2em;
   text-align: center;
   background: #74be2f;

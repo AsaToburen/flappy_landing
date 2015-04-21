@@ -1,8 +1,8 @@
 (function() {
 
-  $(".logo_large").velocity("transition.slideUpIn", {
+  $('.logo_large').velocity('transition.slideUpIn', {
     opacity: [1, 0],
-    display: "block",
+    display: 'block',
     duration: 2000
   });
 
@@ -59,10 +59,13 @@
     //.css("background", "url('./img/bird_sprite.png') -78px 5px");
   };
 
+  var width = $(document).width();
   var animateLog = 0;
 
   function scrollListener(ev) {
-    if (window.scrollY > 208 && animateLog === 0) {
+    if (width < 700) {
+      noAnimation = true;
+    } else if (window.scrollY > 208 && animateLog === 0) {
       animateLog++;
       animateBird();
     }
@@ -75,7 +78,7 @@
 
     var section = $('section.game-info');
     $(this).next().css('display', 'block').velocity('transition.slideDownIn', 1200);
-    $(section).css("height", "+=120px");
+    $(section).css("height", "+=220px");
   });
 
 })();
