@@ -12,21 +12,22 @@
       triggerElement: 'section.social'
     })
     .setVelocity('section.social h2', 'transition.slideDownIn', {
-      opacity: [1, 0]
-    }, {
-      duration: 600
+      duration: 600,
+      complete: function() {
+        scene.removeVelocity();
+      }
     })
-    //.addIndicators()
     .addTo(controller);
 
   var gameInfo = new ScrollMagic.Scene({
       triggerElement: 'section.game-info'
     })
     .setVelocity('.game-info li', 'transition.slideLeftIn', {
-      opacity: 1,
-      duration: 1000
+      stagger: 250,
+      complete: function() {
+        gameInfo.removeVelocity();
+      }
     })
-    //.addIndicators()
     .addTo(controller);
 
   var animateBird = function() {
@@ -78,7 +79,7 @@
 
     var section = $('section.game-info');
     $(this).next().css('display', 'block').velocity('transition.slideDownIn', 1200);
-    $(section).css("height", "+=220px");
+    $(section).css('height', '+=220px');
   });
 
 })();
